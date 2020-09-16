@@ -2,12 +2,12 @@ import jieba
 import math
 import re
 #读入两个txt文件存入s1,s2字符串中
-s1 = open('./sim_0.8/orig.txt','r').read()
-s2 = open('./sim_0.8/orig_0.8_add.txt','r').read()
+s1 = open('./sim_0.8/orig.txt','r',encoding='utf-8').read()
+s2 = open('./sim_0.8/orig_0.8_add.txt','r',encoding='utf-8').read()
 
 #利用jieba分词与停用词表，将词分好并保存到向量中
 stopwords=[]
-fstop=open('stop_words.txt','r',encoding='utf-8-sig')
+fstop=open('stop_words.txt','a+',encoding='utf-8')
 for eachWord in fstop:
     eachWord = re.sub("\n", "", eachWord)
     stopwords.append(eachWord)
