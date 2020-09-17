@@ -5,8 +5,13 @@ import sys
 
 
 def openfile(argv1, argv2):
-    s1 = open(argv1, 'r', encoding='utf-8').read()
-    s2 = open(argv2, 'r', encoding='utf-8').read()
+    s1 = []
+    s2 = []
+    try:
+        s1 = open(argv1, 'r', encoding='utf-8').read()
+        s2 = open(argv2, 'r', encoding='utf-8').read()
+    except IOError:
+        print("文件打开失败")
     return s1, s2
 
 
