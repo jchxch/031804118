@@ -4,6 +4,8 @@ from jieba.analyse import *
 import sys
 
 
+# from memory_profiler import profile
+
 # 导入两个文本的内容
 # @profile()#内存消耗记录显示
 def openfile(argv1, argv2):
